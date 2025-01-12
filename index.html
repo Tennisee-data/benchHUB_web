@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>benchHUB</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensures both `html` and `body` stretch to the full height of the viewport */
+            background-color: #1e3143; /* Background color */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+        }
+        img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove spacing below the image */
+            margin: 0 auto; /* Center horizontally */
+        }
+    
+        @media (max-width: 768px) {
+            img {
+                max-width: 80%; /* Adjust size for smaller screens */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            img {
+                max-width: 70%; /* Further adjust for very small screens */
+            }
+        }
+        
+        body {
+            flex-grow: 1; /* Ensures the body grows to fill the viewport height */
+        }
+        
+        header, footer {
+            width: 100%; /* Ensure full-width coverage for header and footer */
+            background-color: #1e3143; /* Header and footer background */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        section {
+            flex: 1; /* Ensures this section fills all available space between header and footer */
+            display: flex;
+            flex-direction: column; /* Stacks children vertically */
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center; /* Centers the content vertically */
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        section a {
+            color: #1e90ff; /* Choose a color for links, e.g., light blue */
+            text-decoration: none; /* Remove underline */
+        }
+        section a:hover {
+            color: #00bfff; /* Slightly lighter blue on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/benchHUB.jpg" alt="benchHUB Logo">
+        <h1>Welcome to benchHUB, a benchmark for your data science and python dev equipment configuration</h1>
+    </header>
+    <section>
+        <h2>BenchHUB</h2>
+        <p>Hosted on GitHub Pages and contains the code referenced in my YouTube video!</p>
+        <a href="https://github.com/Tennisee-data/benchHUB" target="_blank">View the Code on GitHub</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 REEVES & co.</p>
+    </footer>
+</body>
+</html>
