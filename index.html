@@ -8,59 +8,81 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Ensures both `html` and `body` stretch to the full height of the viewport */
-            background-color: #1e3143; /* Background color */
+            height: 100%;
+            background-color: #1e3143;
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
+            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         img {
-            max-width: 100%; /* Make the image responsive */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Remove spacing below the image */
-            margin: 0 auto; /* Center horizontally */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
     
         @media (max-width: 768px) {
             img {
-                max-width: 80%; /* Adjust size for smaller screens */
+                max-width: 80%;
             }
         }
     
         @media (max-width: 480px) {
             img {
-                max-width: 70%; /* Further adjust for very small screens */
+                max-width: 70%;
             }
         }
         
         body {
-            flex-grow: 1; /* Ensures the body grows to fill the viewport height */
+            flex-grow: 1;
         }
         
         header, footer {
-            width: 100%; /* Ensure full-width coverage for header and footer */
-            background-color: #1e3143; /* Header and footer background */
+            width: 100%;
+            background-color: #1e3143;
             color: white;
             text-align: center;
             padding: 1rem 0;
         }
         
         section {
-            flex: 1; /* Ensures this section fills all available space between header and footer */
+            flex: 1;
             display: flex;
-            flex-direction: column; /* Stacks children vertically */
-            justify-content: center; /* Centers the content horizontally */
-            align-items: center; /* Centers the content vertically */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
             padding: 2rem;
             text-align: center;
         }
         section a {
-            color: #1e90ff; /* Choose a color for links, e.g., light blue */
-            text-decoration: none; /* Remove underline */
+            color: #1e90ff;
+            text-decoration: none;
         }
         section a:hover {
-            color: #00bfff; /* Slightly lighter blue on hover */
-            text-decoration: underline; /* Add underline on hover */
+            color: #00bfff;
+            text-decoration: underline;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background-color: #1E90FF;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .download-button:hover {
+            background-color: #0073e6;
+            transform: scale(1.05);
+            color: white;
+            text-decoration: none;
         }
 
     </style>
@@ -71,9 +93,15 @@
         <h1>Welcome to benchHUB, a benchmark for your data science and python dev equipment configuration</h1>
     </header>
     <section>
-        <h2>BenchHUB</h2>
-        <p>Hosted on GitHub Pages and contains the code referenced in my YouTube video!</p>
+        <h2>BenchHUB Project</h2>
+        <p>The source code and issue tracker for this project are hosted on GitHub.</p>
         <a href="https://github.com/Tennisee-data/benchHUB" target="_blank">View the Code on GitHub</a>
+        
+        <h2 style="margin-top: 40px;">Downloads</h2>
+        <p>Download the benchHUB application for your operating system.</p>
+        <a href="benchHUB-macos.zip" class="download-button" download>Download for macOS</a>
+        <!-- Add buttons for other OSes here in the future -->
+
     </section>
     <footer>
         <p>&copy; 2025 REEVES & co.</p>
